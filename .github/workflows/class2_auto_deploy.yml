@@ -33,6 +33,6 @@ jobs:
       - name: Creating  build
         run: yarn build
       - name: installing surge
-        run: npm install -g surge
+        run: sudo npm install surge --global
       - name: deploying using surge
         run: surge ./build arbaz_class2.surge.sh --token ${{ secrets.SURGE_TOKEN }}
